@@ -1,18 +1,18 @@
 #!/bin/bash
 
-source /home/lichess/.bashrc
+source /home/playstrategy/.bashrc
 
 # Run Redis in the background.
 redis-server --daemonize yes
 
 # Run lila-ws in the background.
-# cd /home/lichess/projects/lila-ws
+# cd /home/playstrategy/projects/lila-ws
 # setsid nohup sbt run &
 
 # Run MongoDB in the background.
 sudo mongod --fork --logpath /var/log/mongod.log
 
-cd /home/lichess/projects/lila
+cd /home/playstrategy/projects/lila
 
 # Update the client side modules.
 # ./ui/build
